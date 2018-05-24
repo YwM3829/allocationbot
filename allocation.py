@@ -1,6 +1,6 @@
 #Allocation discord bot by YwM#3829
 
-
+import os
 import discord
 from discord.ext import commands
 from discord.ext.commands import bot
@@ -65,4 +65,4 @@ async def say(ctx, *args):
 
 
 
-bot.run(TOKEN)
+bot.run(os.environ['TOKEN'])
