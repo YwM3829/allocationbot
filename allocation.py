@@ -55,7 +55,7 @@ async def say(ctx, *args):
 @commands.has_role("Bot Owner")
 async def ask(ctx, member : discord.Member, *, content: str):
     await bot.send_message(member, content)
-    await bot.send_message(ctx.message.author, "Please respond with your answer to the question with #answer YOUR ANSWER")
+    await bot.send_message(member, "Please respond with your answer to the question with #answer YOUR ANSWER")
 
 @bot.command(pass_context=True)
 async def answer(ctx, *, response):
