@@ -51,6 +51,24 @@ async def say(ctx, *args):
     return await bot.say(mesg)
     await bot.delete_message(ctx.message)
 
+@bot.command(pass_context=True)
+@commands.has_role("Bot Owner")
+async def ask(ctx, member : discord.Member, *, content: str):
+    await bot.send_message(member, content)
+    await bot.send_message(ctx.message.author, "Please respond with your answer to the question with #answer YOUR ANSWER")
+
+@bot.command(pass_context=True)
+async def answer(ctx, *, response):
+    owner = await bot.get_user_info(my_user_id)
+    await bot.send_message(owner, "{} responded: {}".format(ctx.message.author.name, response))
+
+    
+    
+    
+    
+    
+    
+    
 #@bot.command(pass_context=True)
 #async def buy(ctx):
 #    await bot.send_message(ctx.message.author, "Please respond with '#sendkey YOUR GIFT CARD CODE'")
