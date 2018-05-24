@@ -65,4 +65,4 @@ async def say(ctx, *args):
 
 
 
-bot.run(TOKEN) 
+bot.run(os.environ['TOKEN']) 
