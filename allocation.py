@@ -20,6 +20,10 @@ async def on_ready():
     print("Allocation is now running!")
     print("It's ID is" + (bot.user.id))
 
+@bot.event
+async def wait_until_login():
+    await bot.change_presence(game=discord.Game(name='https://allocationbot.weebly.com/'))
+
 @bot.command(pass_context = True)
 async def version(ctx):
     await bot.say("This is Allocation pre release.")
