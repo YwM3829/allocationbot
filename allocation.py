@@ -22,7 +22,7 @@ async def on_ready():
 
 @bot.event
 async def wait_until_login():
-    await bot.change_status(game=https://allocationbot.weebly.com/, idle=False)
+    await bot.change_status(game="https://allocationbot.weebly.com/", idle=False)
 
 @bot.command(pass_context = True)
 async def version(ctx):
